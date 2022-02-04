@@ -50,13 +50,14 @@ background-color: lime;
 }
 .webp_img-repeat img{
     width:100%;
+    height: 100%;
 }
-.webp_img-repeat  .first img {
+.webp_img-repeat.first img {
     object-fit: fill;
 }
-.webp_img-repeat  .second img{
+.webp_img-repeat.second img{
     object-fit: contain;
 }
-.webp_img-repeat  .third img{
+.webp_img-repeat.third img{
     object-fit: cover;
 }
