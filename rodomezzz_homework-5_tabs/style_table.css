@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+div {
+    position: relative;
+    top:5vh;
+    width:1200px;
+    margin:0 auto;
+}
+
+.non-lantanoid-actinoid {
+    width:100%;
+}
+
+.non-lantanoid-actinoid td {
+    width: 100px;
+    border:2px solid black;
+    border-radius: 10px;
+}
+
+.lantanoid-actinoid td{
+
+    width: 65px;
+    border:2px solid black;
+    border-radius: 10px;
+
+}
+span {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.f-element {
+    background-color: lime;
+}
+
+td >.type {
+    background-color: white;
+}
+
+.period, .row, #group-of-element, #table-header, .type {
+   text-align: center;
+}
+
+.s-element {
+    background-color: pink;
+}
+
+.p-element {
+    background-color: #ffff4b;
+}
+
+.d-element {
+    background-color: aqua;
+    text-align: right;
+}
+
+#group-of-element {
+    text-transform: uppercase;
+}
+
+#mendeleev-img img{
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
+}
+
+
