@@ -9,19 +9,28 @@
     width:500px;
     margin: 0 auto;
     position: relative;
-    top:20vh;
-    border: 1px solid red;
+    top:15vh;
+    border: 3px solid #8bbe38;
     border-radius: 10px;
 }
 
-.fio, .email, .phone, .sex, .country, .term-of-use, .about-my-self, .submit  {
-    border: 1px solid blue;
+.fio, .email, .phone, .sex, .country, .term-of-use, .about-my-self, .submit, .like-header  {
+
     width:400px;
     margin: 0 auto;
     margin-top: 20px;
 }
 
+.like-header {
+    text-align: center;
+}
+
+label {
+   font-weight: bold;
+}
+
 #fname, #email, #phone, #about {
+    margin:5px 0;
     display: block;
     width: 250px;
     border-radius: 5px;
@@ -29,11 +38,32 @@
 }
 
 #about {
+    box-sizing: border-box;
+    width: 100%;
     height:50px;
     padding-top: 5px;
 }
 
 .submit {
-    width:100px;
-    margin: 0 auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+button {
+    width:120px;
+    height: 2em;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    outline: none;
+    border-radius: 5px;
+}
+#submit {
+    background-color: #1866c5;
+}
+
+#reset {
+    background-color: red;
 }

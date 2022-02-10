@@ -7,7 +7,10 @@
 </head>
 <body>
     <div class="wrapper">
-        <form>
+        <form action="index.html">
+            <div class="like-header">
+                <h2>Расскажи о себе</h2>
+            </div>
             <div class="fio">
                 <label for="fname">ФИО</label>
                 <input type="text" id="fname" name="fio" required placeholder="Введите фамилию, имя, отчество">
@@ -27,25 +30,26 @@
                 <input type="radio"  name="your-sex" > Не ваше дело
             </div>
             <div class="country">
-                <label for="country_choose">Выберите страну</label>
-                <select id="country_choose">
+                <label for="location">Выберите страну</label>
+                <select id="location" name="location">
                     <option value=""></option>
-                    <option>Россия</option>
-                    <option>Казахстан</option>
-                    <option>Украина</option>
+                    <option value="RU">Россия</option>
+                    <option value="KZ">Казахстан</option>
+                    <option value="UA">Украина</option>
                 </select>
 
             </div>
             <div class="about-my-self">
-
-                <label for="about">О себе</label><textarea id="about"></textarea>
+                <label for="about">О себе</label>
+                <textarea id="about">Напиши тут что-нибудь про себя</textarea>
             </div>
-            <div class="term-of-use">
-                <input type="checkbox" id="term-of-use_checkbox">
+            <div class="term-of-use" >
+                <input type="checkbox" name="term-of-use" id="term-of-use_checkbox" required>
                 <label for="term-of-use_checkbox">Принимаю пользовательское соглашение</label>
             </div>
             <div class="submit">
-                <button type="submit"> Отправить</button>
+                <button type="submit" id="submit"> Отправить</button>
+                <button type="reset" id="reset">Сбросить</button>
             </div>
         </form>
     </div>
