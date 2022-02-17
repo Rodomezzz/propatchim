@@ -1,0 +1,94 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.menu, .footer, .next-page {
+
+    width:50vw;
+    margin:30px auto;
+    text-align: center;
+}
+
+.rainbow__title, .footer__title, .menu__title, .next-page__title {
+    text-transform: uppercase;
+    font-family: "Arial Black", sans-serif;
+    font-size: 30px;
+    margin:15px 0;
+}
+
+.menu__content, .footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1;
+    margin-top:20px;
+    box-sizing: border-box;
+
+}
+
+.content__bock-section {
+    text-align: justify;
+
+    padding: 0 30px;
+}
+
+.content__main-section {
+    /*не пойму почему не работает flex-grow*/
+    flex-grow: 2;
+    text-align: justify;
+
+}
+
+.rainbow {
+    text-transform: uppercase;
+    width:50vw;
+    margin: 30px auto;
+    text-align: center;
+}
+
+
+.rainbow__item {
+    margin:5px 0;
+}
+
+ .rainbow__item.red {
+    color: red;
+}
+
+ .rainbow__item.orange:hover {
+     color: orange;
+     transition: 1000ms;
+ }
+
+ .rainbow__item.yellow:first-letter {
+     color: yellow;
+ }
+
+ .rainbow__item.green::selection {
+     color: green;
+ }
+
+ .rainbow__item.blue-sky:active {
+     color: #5d8bd3;
+ }
+
+ .rainbow__item.blue a {
+     color: #5d8bd3;
+     text-decoration: none;
+ }
+.rainbow__item.blue a:visited, .rainbow__item.blue a:hover, .rainbow__item.blue a:active {
+    color: #5d8bd3;
+    text-decoration: none;
+    cursor: default;
+}
+
+ .rainbow__item:not(.violet) {
+     font-weight: bold;
+ }
+
+
