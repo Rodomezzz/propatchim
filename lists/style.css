@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+}
+
+.page-menu-list__container {
+    width:500px;
+    margin:20px auto;
+    padding:0;
+    display:flex;
+}
+
+.page-menu-list__item a {
+    text-decoration: none;
+    color: white;
+}
+
+.page-menu-list__item {
+    width:100px;
+
+    list-style:none;
+    padding:0;
+    text-align: center;
+    background: linear-gradient( #6cbb2c, #e0bc19);
+
+}
+
+.page-menu-list__item:hover {
+    background: linear-gradient( #2cbbaa, #7919e0);
+}
+
+.page-menu-list__container li:first-child {
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.page-menu-list__container li:last-child {
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.unordered-list {
+    width: 200px;
+    border:2px solid red;
+}
+
+.unordered-list__container {
+    width:200px;
+    border:1px solid lime;
+}
+
+.unorderd-list__item {
+    list-style: square;
+    width: 200px;
+    border:1px solid blue;
+}
+
+.unorderd-list__item.pos2 {
+
+}
+
+.ordered-list__container {
+    list-style: none;
+    counter-reset: li;
+
+}
+/*переопределяем свойства вложенных списков*/
+.ordered-list__container li::before {
+
+    counter-increment: li;
+    content:counters(li, ".")". ";
+}
