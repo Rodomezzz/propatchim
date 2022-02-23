@@ -1,0 +1,111 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.page {
+    width:100%;
+    height: 1000px;
+    background:#FF0000FF;
+    position:relative;
+    top:0;
+    left:0;
+    padding: 50px;
+}
+/*применяются padding родителя, position:sticky не вырывает из потока, поэтому
+ .page__main следует сразу после него. при скролле при top:0; заданные ранее
+  padding:50px; не работают и происходит залипание блока у верхнего края окна.
+  если задать top===padding, то при скролле будет сохранться указанное значение относительно окна*/
+.page__page {
+    width:100%;
+    height:200px;
+    position:sticky;
+    top:50px;
+    left:0;
+    background: palevioletred;
+}
+/*если не выставить у дочернего элемента позицию top:0; left:0; при position:absolute, то
+ padding родителя будет восприниматься за эти значения*/
+.page__header {
+    width:30%;
+    height:60px;
+    background: #8bbe38;
+    position: absolute;
+    top:50%;
+    left:30%;
+    transition: 0.5s transform ease-out;
+    transform: translate3d(-30%,0,0) ;
+    z-index: 200;
+
+}
+
+.page__header:hover {
+    transform:rotate(45deg);
+}
+/*при position:relative у родительского и дочернего элемента, padding родительского элемента будет применён к дочернему */
+.page__main {
+    width:100%;
+    height:120px;
+    background: #345483;
+    position: relative;
+    top:0;
+    left:0;
+    /*display: flex;*/
+}
+
+.page__main__sidebar {
+
+    width: 400px;
+    height:400px;
+    position: absolute;
+    background-color: hotpink;
+    text-align: justify;
+    z-index: 50;
+
+}
+
+.page__main__sidebar a {
+    background: #ffcc99;
+    text-decoration: none;
+    color:red;
+    transition: 0.5s;
+
+}
+
+.page__main__sidebar a:hover {
+    color:white;
+}
+
+.page__main__content {
+    width: 70%;
+    height:300px;
+    position: absolute;
+    top:100px;
+    left:100px;
+    background: aqua;
+   transition: 1s;
+}
+
+.page__main__content:hover {
+    opacity: 0;
+}
+/*visability:hidden - скрывает блок и делает его недоступным;
+opacity:0-1; - можно скрыть блок, сделать его полупрозрачнм, при всем этом
+он останется доступным;
+pointer-events: none; - делает часть неактивной - не выделить, не кликнуть и т.д.;
+white-space:nowrap - отображение текста без переноса строк;
+text-overflow:ellipsis - текст, который не влез будет отображён точками(многоточие);
+text-overflow:hidden - текст, который не влез просто будет скрыт;*/
+.page__footer {
+    background: black;
+    position:fixed;
+    width:50%;
+    height:50px;
+    top:50px;
+    /*left:auto;*/
+    right:auto;
+
+
+}
+
