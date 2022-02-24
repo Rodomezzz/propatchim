@@ -11,14 +11,66 @@
     padding:0 20px;
     display:flex;
     justify-content: space-between;
-    border:1px solid blue;
+
+    position:relative;
+}
+.main.spl1{
+    border: 3px solid black;
+    flex-wrap: wrap;
 }
 
 .main__block {
     width:20%;
     height: 250px;
     background-color: palevioletred;
-    border:1px solid red;
+    border: 1px solid white;
     text-align: justify;
 
 }
+
+.main__block p {
+    font-family: "Comic Sans MS";
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main__block.mod1 {
+    position: relative;
+    background-color: #2cbbaa;
+}
+
+.main__block.mod2{
+    position: absolute;
+    top:0;
+    left:415px;
+    background-color: #8bbe38;
+}
+/*чтобы показать функциональность позиционирования, пришлось
+набить в section divов, чтобы была видна прокрутка*/
+.main__block.mod3{
+    position: sticky;
+    top:20px;
+    right:415px;
+    background-color: #7899b4;
+}
+
+.main__block.mod3 a {
+    color:#000000;
+    text-decoration: none;
+    text-align: center;
+}
+.main__block.mod3 a:visited {
+    color:#000000;
+
+}
+
+.main__block.mod4{
+    position: fixed;
+    top:0;
+    right:0;
+    background-color: #92be6f;
+    z-index: -1;
+}
+
