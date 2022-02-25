@@ -34,14 +34,13 @@ img {
     height:40px;
     border-top: 2px solid #FF69B4FF;
     border-bottom: 2px solid #FF69B4FF;
+    text-align: center;
 }
 
-.header__title {
+.header__title, .main__chapter__title, .main__title {
     text-transform: uppercase;
-}
-
-.main__chapter__title, .main__title {
-    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Arial Black";
 }
 
 .book-page {
