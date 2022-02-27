@@ -57,6 +57,7 @@ img {
     margin: 0 auto;
     /*background-color: lime;*/
     background-image:url("background-img.png");
+    background-size: contain ;
     background-repeat: round;
     padding: 20px 50px;
     text-align: justify;

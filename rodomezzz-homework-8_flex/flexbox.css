@@ -25,3 +25,38 @@ img {
     width: 100%;
     display: block;
 }
+
+.main {
+    width: 70%;
+    margin: 0 auto;
+    border: 1px solid red;
+    display:flex;
+
+}
+
+.main__block {
+    width: 200px;
+    height: 200px;
+    border:1px solid #000000;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+.main.main-two {
+    flex-wrap: nowrap;
+}
+
+.main.main-two {
+    flex-wrap: wrap;
+}
+
+.main.main-three {
+    flex-wrap: wrap-reverse;
+}
+
+.main.main-four{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
