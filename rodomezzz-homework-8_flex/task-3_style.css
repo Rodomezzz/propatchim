@@ -1,0 +1,128 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+
+ul[class], ol[class] {
+    padding: 0;
+}
+
+
+body, h1, h2, h3, h4, p,ul[class], ol[class], li, figure, blockquote, dl,
+dd, figcaption {
+    margin:0;
+}
+
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+.block{
+    width:670px;
+    height:100vh;
+    margin:0 auto;
+    border:1px solid black;
+
+}
+
+.block__item {
+    width:200px;
+    height:200px;
+    border:1px solid red;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+/*хотел сделать флексом расположение номерных контейнеров, но почему-то не получается,
+если у .block__item поставить display:flex;то всё идет по одному месту, ниже предполагался костыль для лечения*/
+/*.block__item:not(.block__item.block__item-eighth,.block__item.block__item-seventh,.block__item.block__item-sixth,.block__item.block__item-fifth,.block__item.block__item-fourth,.block__item.block__item-third,.block__item.block__item-second,.block__item.block__item-first  ) {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+
+.block__item-first {
+    overflow-y: auto;
+    text-align: center;
+    background-image: url("img/numbers/one.png");
+
+}
+
+.block__item-second {
+    white-space: nowrap;
+    overflow-x: auto;
+    background-image: url("img/numbers/two.png");
+}
+
+.block__item-third {
+   overflow: hidden;
+    background-image: url("img/numbers/three.png");
+}
+
+.block__item-fourth {
+    overflow: hidden;
+    background-image: url("img/numbers/forth.png");
+
+}
+
+.block__item-fourth:hover {
+    visibility: visible;
+    overflow: auto;
+
+}
+
+.block__item-fifth {
+    overflow: hidden;
+    background-image: url("img/numbers/fifth.png");
+    opacity: 0;
+
+}
+
+.block__item-fifth:active {
+    opacity: 1;
+    transition: 500ms;
+    overflow: auto;
+
+}
+
+
+.block__item-sixth {
+    background-image: url("img/numbers/sixth.png");
+}
+
+.block__item-sixth a {
+    display: block;
+}
+
+.block__item-seventh {
+    display:flex;
+    background-image: url("img/numbers/seventh.png");
+}
+
+.block__item-seventh div {
+    text-transform: uppercase;
+}
+
+.block__item-eighth {
+    background-image: url("img/numbers/eigth.png    ");
+}
+
+.block__item-eighth-link {
+    background-image: none;
+    border: none;
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+

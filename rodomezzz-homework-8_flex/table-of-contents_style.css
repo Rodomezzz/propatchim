@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul[class], ol[class] {
+    padding: 0;
+}
+
+.table-of-contents {
+    width: 80%;
+
+    margin: 40px auto;
+
+}
+
+.table-of-contents__title {
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 30px;
+
+
+}
+
+.table-of-contents__list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+}
+
+.table-of-contents__list li{
+    list-style: url("icons/favicon-32x32.png");
+}
+
+.table-of-contents__item a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 32px;
+
+    font-family: sans-serif;
+
+}
+.table-of-contents__item a:visited{
+    color: #000000;
+}

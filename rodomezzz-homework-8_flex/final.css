@@ -25,28 +25,3 @@ img {
     width: 100%;
     display: block;
 }
-
-.block {
-    width:200px;
-    height:200px;
-    border:1px solid red;
-}
-
-.block.first {
-    overflow-y: auto;
-}
-
-.block.second {
-    overflow-x: auto ;
-}
-
-.block.third {
-
-    overflow: clip;
-}
-
-.block.fourth {
-    text-overflow: ;
-
-}
-
