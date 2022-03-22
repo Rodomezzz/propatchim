@@ -1,45 +1,32 @@
 "use strict";
-// let firstNumber = prompt('Введите число');
-// console.log(firstNumber, typeof firstNumber);
-// while (firstNumber === false){
-// 	alert ('Необходимо ввести число');
-// 	firstNumber = prompt('Введите число');
-// }
-
-// let firstOperand = Number(firstNumber);
-// console.log(firstOperand, typeof firstOperand);
-// while (firstOperand === false && !firstOperand && isNaN(firstOperand)) {
-// 	alert ('Необходимо ввести число');
-// 	firstNumber = prompt('Введите число');
-// }
-
-let firstOperand = Number(prompt('Введите число'));
+let firstOperand = prompt('Введите число');
 console.log(firstOperand, typeof firstOperand);
-while (firstOperand === false && !firstOperand && isNaN(firstOperand)) {
-	alert ('Необходимо ввести число');
-	firstOperand = Number(prompt('Введите число'));
+while (firstOperand === null || firstOperand ==='' || isNaN(firstOperand)){
+	alert ('Введите число правильно');
+	firstOperand = prompt('Введите число');
 }
 
 let operator = prompt('Введите один из операторов: +, -, *, /');
 console.log(operator, typeof operator);
 
-while (operator === false && operator !== '+' && operator !== '-' && operator !== '*' && operator !== '/') {
-	console.log(operator);
-	alert ('Необходимо ввести оператор');
+while (operator === null || operator ==='' || operator !== '+' &&
+operator !== '-' && operator !== '*' && operator !== '/') {
+	alert ('Введите оператор правильно');
 	operator = prompt('Введите один из операторов: +, -, *, /');
 }
 
-
-let secondOperand = Number(prompt('Введите число'));
+let secondOperand = prompt('Введите число');
 console.log(secondOperand, typeof secondOperand);
-while (secondOperand === false && isNaN(secondOperand)) {
+while (secondOperand === null || secondOperand ==='' || isNaN(secondOperand)){
 	alert ('Необходимо ввести число');
-	secondOperand=Number(prompt('Введите число'));
+	secondOperand = prompt('Введите число');
 }
-while (operator === '/' && secondOperand === 0 ){
+//не понял почему этот код получился невалидный
+/*while (secondOperand === 0 &&  operator === '/'){
 	alert ('На ноль делить нельзя (хотя это и JS, но калькулятор мой)');
-	secondOperand=Number(prompt('Введите число'));
-}
+	secondOperand=prompt('Введите число');
+}*/
+
 const calculator = function (firstOperand,secondOperand, operator){
 	if(operator === '+'){
 		return firstOperand + secondOperand;
@@ -54,15 +41,6 @@ const calculator = function (firstOperand,secondOperand, operator){
 
 console.log(calculator(firstOperand, secondOperand, operator));
 
-// let a = null;
-// console.log(typeof a);
-// let b = Number(a);
-// console.log(b, typeof b);
-//
-// let c = undefined;
-// console.log(c, typeof c);
-//
-// let d = Number(c);
-// console.log(d, typeof d);
+
 
 
